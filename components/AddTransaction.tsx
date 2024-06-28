@@ -1,6 +1,7 @@
 "use client"
 
 import addTransaction from "@/app/actions/addTransaction";
+import { toast } from "react-toastify";
 
 const AddTransaction = () => {
 
@@ -10,9 +11,9 @@ const AddTransaction = () => {
 
 
        if(error) {
-              alert(error);
+             toast.error(error);
          } else {
-             alert('Transaction added successfully');
+             //alert('Transaction added successfully');
              console.log(data);
          }
     }

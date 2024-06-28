@@ -1,4 +1,7 @@
-"use server";  //server action 
+"use server";
+import { auth } from "@clerk/nextjs/server";
+
+  //server action 
 
 interface TransactionData { //Transaction data interface
     text: string; 
@@ -23,6 +26,17 @@ Promise<TransactionResult> { //addTransaction function
     
         const text:string=textValue?.toString(); //text value should be string
         const amount:number=parseFloat(amountValue.toString()); //amount value should be number
+
+
+        //chcek the logged in user and get the user id
+        const {userId} = auth();
+       // console.log(userId);
+
+       //check if the user is logged in
+        if(!userId) {
+            return { error: 'You must be logged in to add transactions' };
+        }
+
 
         const transactionData : TransactionData = { //transaction data
             text,
