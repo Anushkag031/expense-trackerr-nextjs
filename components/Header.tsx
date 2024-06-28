@@ -4,7 +4,7 @@ import { SignInButton, SignedIn,SignedOut,UserButton } from "@clerk/nextjs";
 const Header = async() => {
 
     const user=await checkUser();
-    console.log(user); // user object is logged in the console
+    //console.log(user); // user object is logged in the console
     return ( 
     <nav className="navbar">
         <div className="navbar-container">
