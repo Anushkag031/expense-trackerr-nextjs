@@ -1,6 +1,6 @@
 //this file is to interact with the database
 
-import { PrismaClient } from "@prisma/client/edge";
+import { PrismaClient } from "@prisma/client";
 
 
 declare global {
