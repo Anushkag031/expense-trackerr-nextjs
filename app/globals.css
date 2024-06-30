@@ -75,35 +75,34 @@ h1 {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes buttonPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
 body {
-  background-color: #f7f7f7;
+  background-color: #f0f0f0;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   animation: fadeIn 1s ease-in;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .container {
-  margin: 30px auto 30px 120px;
-  width: 350px;
+  margin: 30px auto;
+  width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: 20% center;
+  align-items: center;
   justify-content: center;
   animation: slideIn 0.5s ease-in-out;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 .navbar {
   background: #000;
   color: #fff;
-  animation: slideIn 0.5s ease-in-out;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .navbar a {
@@ -113,76 +112,40 @@ body {
 }
 
 .navbar a:hover {
-  color: rebeccapurple;
+  color: #6a0dad;
 }
 
-.navbar button,
-.guest button {
+.navbar button {
   border: 0;
   border-radius: 5px;
-  background: rebeccapurple;
+  background: #6a0dad;
   color: #fff;
   padding: 0.5rem 2rem;
   cursor: pointer;
   transition: opacity 0.3s, transform 0.3s;
-  animation: buttonPulse 1.5s infinite;
 }
 
-.navbar button:hover,
-.guest button:hover {
+.navbar button:hover {
   opacity: 0.9;
   transform: translateY(-2px);
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.navbar .cl-button {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.navbar .cl-button:hover {
-  transform: rotate(90deg);
 }
 
 h1 {
   letter-spacing: 1px;
   margin: 0;
-  animation: colorChange1 5s infinite ease-in-out;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-@keyframes colorChange1 {
-  0% { color: black; }
-  50% { color:#576ea4 }
-  100% { color: black; }
+  color: #333;
 }
 
 h3 {
   border-bottom: 1px solid #bbb;
   padding-bottom: 10px;
-  animation: colorChange 5s infinite ease-in-out;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-@keyframes colorChange {
-  0% { color: black; }
-  50% { color: #bbb; }
-  100% { color: black; }
+  color: #333;
 }
 
 h4 {
   margin: 0;
   text-transform: uppercase;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #6a0dad;
 }
 
 .guest {
@@ -197,7 +160,7 @@ h4 {
 
 .inc-exp-container {
   background-color: #fff;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -230,29 +193,22 @@ h4 {
 label {
   display: inline-block;
   margin: 10px 0;
+  color: #333;
 }
 
 input[type='text'],
 input[type='number'] {
   border: 1px solid #dedede;
-  border-radius: 2px;
+  border-radius: 5px;
   display: block;
   font-size: 16px;
   padding: 10px;
   width: 100%;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  animation: inputFadeIn 1s ease-in;
-}
-
-@keyframes inputFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .btn {
   cursor: pointer;
-  background-color:#576ea4;
-  box-shadow: var(--box-shadow);
+  background-color: #6a0dad;
   color: #fff;
   border: 0;
   display: block;
@@ -261,8 +217,6 @@ input[type='number'] {
   padding: 10px;
   width: 100%;
   transition: all 0.3s ease-in-out;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  animation: btnFadeIn 1s ease-in;
 }
 
 .btn:hover {
@@ -287,19 +241,13 @@ input[type='number'] {
 
 .list li {
   background-color: #fff;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: #333;
   display: flex;
   justify-content: space-between;
   position: relative;
   padding: 10px;
   margin: 10px 0;
-  animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 .list li.plus {
@@ -318,25 +266,18 @@ input[type='number'] {
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
+  position:initial;
+  top: 20%;
+  left: 0%;
+  transform: translateY(-100%,-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: translate(-100%, -50%) scale(1); }
-  50% { transform: translate(-100%, -50%) scale(1.1); }
-  100% { transform: translate(-100%, -50%) scale(1); }
 }
 
 .list li:hover .delete-btn {
   opacity: 1;
-  transform: translate(0, -50%);
 }
+
 h2 {
   background: linear-gradient(90deg, #f0f0f0 25%,#576ea4 50%, #f0f0f0 75%);
   background-size: 200% auto;
@@ -352,43 +293,12 @@ h2 {
     background-position: 200% center;
   }
 }
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
 
-body {
-  background-image: url('exp.webp');
-  background-position: 10% center; /* Add left padding */
-  background-repeat: no-repeat;
-  animation: bodyBackgroundChange 10s ease-in-out infinite, backgroundScroll 5s linear infinite;
-  transition: background-color 0.5s ease-in-out;
-}
-
-@keyframes backgroundScroll {
-  0% { background-position: 60% center; }
-  100% { background-position: 90% center; }
-}
-
-/* ... rest of your styles ... */
-
-@keyframes bodyBackgroundChange {
-  0% { background-color: #afcaf3; }
-  25% { background-color: #b6b8f3; }
-  50% { background-color: #c5c7f3; }
-  75% { background-color: #b6b8f3; }
-  100% { background-color: #afcaf3; }
-}
 @media screen and (max-width: 600px) {
   .container {
     width: 100%;
     margin: 20px auto;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    padding: 1rem;
+    padding: 10px;
   }
 
   .inc-exp-container {
@@ -412,13 +322,16 @@ body {
   .list li {
     flex-direction: column;
     align-items: flex-start;
+    
   }
 
   .delete-btn {
     position: initial;
     margin-top: 10px;
+    text-align: right; margin-left: auto;  
   }
 }
+
 @media screen and (max-width: 961px) {
   body {
     background-image: none;
@@ -431,6 +344,4 @@ body {
     width: 100%;
     margin: 20px auto;
   }
-
-  /* ... rest of your styles ... */
 }
